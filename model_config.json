@@ -1,0 +1,126 @@
+{
+  "model_path": "ami_catboost_model.cbm",
+  "scale_params": {
+    "center": {
+      "AMIed": 0.1443,
+      "COPD": 0.0569,
+      "DD": 1.0598,
+      "Uric_acid": 369.8537,
+      "age": 72.8309,
+      "alt": 31.0304,
+      "aspirin_like": 0.7405,
+      "bnp": 3556.7177,
+      "cr": 120.3255,
+      "revasc": 0.4023
+    },
+    "scale": {
+      "AMIed": 0.3517,
+      "COPD": 0.2317,
+      "DD": 1.512,
+      "Uric_acid": 107.5213,
+      "age": 10.0562,
+      "alt": 41.5631,
+      "aspirin_like": 0.4387,
+      "bnp": 5420.8891,
+      "cr": 110.8688,
+      "revasc": 0.5857
+    }
+  },
+  "features": {
+    "age": {
+      "type": "numeric",
+      "min": 27,
+      "max": 97,
+      "default": 73.5,
+      "step": 0.1
+    },
+    "aspirin_like": {
+      "type": "numeric",
+      "min": 0,
+      "max": 1,
+      "default": 1,
+      "step": 0.1
+    },
+    "COPD": {
+      "type": "numeric",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "step": 0.1
+    },
+    "AMIed": {
+      "type": "numeric",
+      "min": 0,
+      "max": 1,
+      "default": 0,
+      "step": 0.1
+    },
+    "alt": {
+      "type": "numeric",
+      "min": 3,
+      "max": 422,
+      "default": 19.85,
+      "step": 1
+    },
+    "cr": {
+      "type": "numeric",
+      "min": 35,
+      "max": 796,
+      "default": 84.26,
+      "step": 1
+    },
+    "bnp": {
+      "type": "numeric",
+      "min": 13,
+      "max": 32200,
+      "default": 1363.83,
+      "step": 1
+    },
+    "DD": {
+      "type": "numeric",
+      "min": 0,
+      "max": 20,
+      "default": 0.56,
+      "step": 0.1
+    },
+    "Uric_acid": {
+      "type": "numeric",
+      "min": 85,
+      "max": 748,
+      "default": 352.36,
+      "step": 1
+    },
+    "revasc": {
+      "type": "numeric",
+      "min": 0,
+      "max": 2,
+      "default": 0,
+      "step": 0.1
+    }
+  },
+  "feature_names": ["age", "aspirin_like", "COPD", "AMIed", "alt", "cr", "bnp", "DD", "Uric_acid", "revasc"],
+  "display_names": {
+    "revasc": "Coronary Revascularization",
+    "aspirin_like": "Aspirin at Discharge",
+    "alt": "Alanine Aminotransferase (ALT)",
+    "DD": "D-Dimer",
+    "Uric_acid": "Uric Acid",
+    "cr": "Serum Creatinine",
+    "AMIed": "Prior Myocardial Infarction",
+    "age": "Age",
+    "COPD": "Chronic Obstructive Pulmonary Disease",
+    "bnp": "B-Type Natriuretic Peptide (BNP)"
+  },
+  "performance": {
+    "AUC": 0.8045,
+    "Sensitivity": 0.6591,
+    "Specificity": 0.74,
+    "Precision": 0.3085,
+    "F1": 0.4203
+  },
+  "best_cutoff": 0.1875,
+  "feature_importance": {
+    "features": ["age", "aspirin_like", "COPD", "AMIed", "alt", "cr", "bnp", "DD", "Uric_acid", "revasc"],
+    "importance": [0, 0, 0, 0, 0.633, 0, 0, 49.7337, 0, 49.6333]
+  }
+}
