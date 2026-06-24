@@ -109,7 +109,7 @@
     "AMIed": "Prior Myocardial Infarction",
     "age": "Age",
     "COPD": "Chronic Obstructive Pulmonary Disease",
-    "bnp": "B-Type Natriuretic Peptide (BNP)"
+    "bnp": "N-Terminal pro-B-Type Natriuretic Peptide (NT-proBNP)"
   },
   "performance": {
     "AUC": 0.8045,
